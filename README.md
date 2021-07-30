@@ -17,8 +17,6 @@ The goal of this challenge is: When the button is clicked, the following things 
 
 -Check the opacity value to make it the most readable
 
-### My Take
-
 
 
 
