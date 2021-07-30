@@ -5,11 +5,11 @@ import Button from './components/Button'
 import Text from './components/Text'
 
 const fontsArr = [
-        "Impact, sans-serif",
-        "Brush Script MT, cursive",
-        "Luminari, fantasy",
-        "Comic Sans MS, cursive",
-        "American Typewriter, serif"
+        "Caveat, cursive",
+        "Josefin Slab, serif",
+        "Lobster Two, cursive",
+        "Roboto, sans-serif",
+        "Source Code Pro, monospace"
     ]
 
 const fontWeights = [
@@ -48,8 +48,8 @@ class App extends React.Component {
     
     let newRCA = rca.map(Number)
     
-    //IF statement for light HSLA
-    if(newRCA[2] < 51){
+    //IF statement for light BG
+    if(newRCA[2] < 48.7){
       console.log("less than 55....  " + newRCA)
 
       let newHSLA = "hsla("+newRCA[0]+","+newRCA[1]+"%, "+newRCA[2]+"%, "+newRCA[3]+")"
@@ -73,8 +73,8 @@ class App extends React.Component {
         }
       });
     }
-      //IF statement for dark HSLA
-    else if(newRCA[2] > 51){
+      //IF statement for dark BG
+    else if(newRCA[2] > 48.7){
       this.setState({
         beautifyText:{
           fontFamily: fontsArr[randomFont],

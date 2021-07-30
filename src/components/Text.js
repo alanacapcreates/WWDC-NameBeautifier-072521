@@ -4,7 +4,7 @@ class Text extends Component{
    constructor(props) {
         super(props)
         this.state = {
-            text: ""
+            text: "Sample Text"
         }
         this.handleChange = this.handleChange.bind(this)
     }
@@ -27,7 +27,7 @@ class Text extends Component{
                 <input  
                         type="text" 
                         id="text"
-                        value={this.state.text} 
+                        // value={this.state.text} 
                         name="text" 
                         placeholder="Enter Your Text Here" 
                         onChange={this.handleChange} 
