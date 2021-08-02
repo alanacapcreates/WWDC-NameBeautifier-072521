@@ -47,18 +47,23 @@ class App extends React.Component {
     rca[3] = 1
     
     let newRCA = rca.map(Number)
+    newRCA[2] = newRCA[2].toFixed(2)
     
+    let newHSLA = "hsla("+newRCA[0]+", "+newRCA[1]+"%, "+newRCA[2]+"%, "+newRCA[3]+")"
+    // console.log(`Long HSLA: ${randomizedColor}`)
+    // console.log(`Short HSLA: ${newHSLA}`)
+
+
     //IF statement for light BG
     if(newRCA[2] < 48.7){
       console.log("less than 55....  " + newRCA)
 
-      let newHSLA = "hsla("+newRCA[0]+","+newRCA[1]+"%, "+newRCA[2]+"%, "+newRCA[3]+")"
 
       this.setState({
         beautifyText:{
           fontFamily: fontsArr[randomFont],
           fontWeight: fontWeights[randomFontWeight],
-          color:randomizedColor,
+          color:newHSLA,
         },
         background:{
           background: newHSLA,
@@ -79,10 +84,10 @@ class App extends React.Component {
         beautifyText:{
           fontFamily: fontsArr[randomFont],
           fontWeight: fontWeights[randomFontWeight],
-          color:randomizedColor,
+          color: newHSLA,
         },
         background:{
-          background: randomizedColor,
+          background: newHSLA,
           color:"black",
         },
         container:{
